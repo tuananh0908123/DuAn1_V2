@@ -11,8 +11,10 @@
     <div class="boxcenter">
         <div class="row mb menu">
             <ul>
-                <li>Shop bán quần áo
+                <li>Techshop
+                    <div style="width: 10px; height:10px;">
                     <img src="./images/logo.png" alt="">
+                    </div>
                 </li>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="index.php?act=gioithieu">Shop</a></li>
