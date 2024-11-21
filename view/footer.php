@@ -1,26 +1,24 @@
 
     <div>
-        <footer style="color: #ffffff; padding: 20px 0; text-align: center;">
+        <footer style="color: #ffffff; padding: 20px 0; text-align: center; max-width:1200px ">
     <div style="max-width: 1200px; margin: auto; padding: 0 20px;">
         <!-- Thông tin liên hệ -->
-        
-        <div style="margin-bottom: 20px;">
+        <div style="margin-bottom: 20px;; color: #fff; text-align: center; padding: 10px 0;">
         
             <h3 style="margin-bottom: 10px; color: #00d4ff;">Tech Shop</h3>
-            <p style="color: black;">Email: support@techshop.com</p>
-            <p style="color: black;">Hotline: +84 123 456 789</p>
+            <p style="color: #777;">Email: support@techshop.com</p>
+            <p style="color: #777;">Hotline: +84 123 456 789</p>
             
-        </div>
-        <div style="background-color: black;">
+        
 
         <!-- Liên kết nhanh -->
         
         <div style="margin-bottom: 20px;">
             <ul style="list-style: none; padding: 0; margin: 0;">
-                <li style="display: inline; margin: 0 15px;"><a href="index.php" style="color: #00d4ff; text-decoration: none;">Trang chủ</a></li>
-                <li style="display: inline; margin: 0 15px;"><a href="#" style="color: #00d4ff; text-decoration: none;">Sản phẩm</a></li>
-                <li style="display: inline; margin: 0 15px;"><a href="#" style="color: #00d4ff; text-decoration: none;">Liên hệ</a></li>
-                <li style="display: inline; margin: 0 15px;"><a href="#" style="color: #00d4ff; text-decoration: none;">Hỗ trợ</a></li>
+                <li style="display: inline; margin: 0 15px;"><a href="index.php" style="color: #00d4ff; text-decoration: none;">Home</a></li>
+                <li style="display: inline; margin: 0 15px;"><a href="#" style="color: #00d4ff; text-decoration: none;">Shop</a></li>
+                <li style="display: inline; margin: 0 15px;"><a href="#" style="color: #00d4ff; text-decoration: none;">About</a></li>
+                <li style="display: inline; margin: 0 15px;"><a href="#" style="color: #00d4ff; text-decoration: none;">Contact</a></li>
             </ul>
         </div>
 

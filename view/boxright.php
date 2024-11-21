@@ -65,12 +65,6 @@
                 <?php } ?>
                 </ul>
             </div>
-            <div class="boxfooter searchbox">
-                <form action="index.php?act=sanpham" method="post">
-                    <input type="text" name="kyw">
-                    <input type="submit" name="timkiem" value="Tìm kiếm">
-                </form>
-            </div>
         </div>
         <div class="row">
             <div class="boxtitle">Top sản phẩm yêu thích</div>

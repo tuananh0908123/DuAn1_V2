@@ -29,8 +29,7 @@
         </div>                            
         <div class="row mb">
         <div class="boxtitle">Bình luận</div>
-            <div class="row boxcontent">            
-                            
+            <div class="row boxcontent">             
             </div>            
         </div>                            
     </div>
