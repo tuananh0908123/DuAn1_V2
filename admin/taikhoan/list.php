@@ -9,7 +9,6 @@
                             <th></th>
                             <th>Mã tài khoản</th>
                             <th>Tên đăng nhập</th>
-                            <th>Mật khẩu</th>
                             <th>Email</th>
                             <th>Địa chỉ</th>
                             <th>Điện thoại</th>
@@ -22,7 +21,6 @@
                                     <td><input type="checkbox" name="" id=""></td>
                                     <td><?= $taiKhoan['id']?></td>
                                     <td><?= $taiKhoan['user']?></td>
-                                    <td><?= $taiKhoan['pass']?></td>
                                     <td><?= $taiKhoan['email']?></td>
                                     <td><?= $taiKhoan['address']?></td>
                                     <td><?= $taiKhoan['tel']?></td>

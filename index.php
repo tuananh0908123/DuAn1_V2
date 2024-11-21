@@ -4,7 +4,7 @@
     include "model/sanpham.php";
     include "view/header.php";
 
-    define("BASE_URL", "http://localhost/duan11/");
+    define("BASE_URL", "http://localhost:8080/duan11/");
     include "model/danhmuc.php";
     include "model/taikhoan.php";
 
@@ -131,6 +131,15 @@
 
             case 'lienhe' :
                 include "view/lienhe.php";
+                break;
+
+            case 'hoidap' :
+                if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                    $name = $_POST['name'];
+                    $email = $_POST['email'];
+                    $question = $_POST['question'];
+                }
+                include "view/hoidap.php";
                 break;
             
             default :
