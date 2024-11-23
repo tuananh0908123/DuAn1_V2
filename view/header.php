@@ -22,21 +22,27 @@
     <div class="boxcenter">
         <div class="row mb menu">
             <ul>
+
+                <div style="width: 70px; height:70px ;">
+                    <img src="view/images/logo1.png" style="width:100% ; padding : auto">
+                </div>
                 <li>
-                    <div style="width: 50px; height:50px">
-                        <img src="view/images/logo1.jpg">
-                    </div>
+                    <p style="color: black"><strong>Techshop</strong></p>
                 </li>
-                <li style="margin-left:320px"><a href="index.php">Home</a></li>
+
+                <li style="margin-left:250px"><a href="index.php">Home</a></li>
                 <li><a href="index.php?act=">Shop</a></li>
                 <li><a href="index.php?act=gioithieu">About</a></li>
                 <li><a href="index.php?act=lienhe">Contact</a></li>
                 <li style="margin-left:auto"><a href="index.php?act=hoidap">❓</a></li>
-                <li><a href="">🛒</a></li>
+                <li><a href="index.php?act=giohang">🛒</a></li>
                 <li style="position: relative;"
                     onmouseover="showSearchInput()"
                     onmouseout="hideSearchInput()">
-                    <a href="javascript:void(0);" style="text-decoration: none;">🔍</a>
+                    <a href="javascript:void(0);" style="text-decoration: none;">
+                        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+                        <i style="margin-top:4px" class="fas fa-search"></i>
+                    </a>
                     <div id="searchInput" style="display: none; position: absolute;top: 45px; right: 0; background-color: #fff; border: 1px solid #ccc; padding: 5px;">
                         <form action="index.php?act=sanpham" method="post">
                             <input type="text" name="kyw" placeholder="Nhập sản phẩm cần tìm" style="padding: 5px; width: 180px;">

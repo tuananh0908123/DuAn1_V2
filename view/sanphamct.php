@@ -1,3 +1,4 @@
+
 <div class="row mb">
     <div class="boxtrai mr" style="margin-bottom: auto;">
 
@@ -36,7 +37,7 @@
                     <ul>
                         <?php foreach ($sp_cung_loai as $sanPham): ?>
                             <li>
-                                <a href="index.php?act=sanphamct&idsp=<?= htmlspecialchars($sanPham['id']) ?>">
+                                <a style="text-decoration: none;" href="index.php?act=sanphamct&idsp=<?= htmlspecialchars($sanPham['id']) ?>">
                                     <?= htmlspecialchars($sanPham['name']) ?>
                                 </a>
                             </li>
@@ -53,3 +54,4 @@
         <?php include "boxright.php"; ?>
     </div>
 </div>
+
