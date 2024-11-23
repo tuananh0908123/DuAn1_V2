@@ -133,13 +133,8 @@
                 include "view/lienhe.php";
                 break;
 
-            case 'hoidap' :
-                if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                    $name = $_POST['name'];
-                    $email = $_POST['email'];
-                    $question = $_POST['question'];
-                }
-                include "view/hoidap.php";
+            case 'giohang' :
+                include "view/giohang.php";
                 break;
             
             default :

@@ -5,6 +5,7 @@
     include "../model/sanpham.php";
     include "../model/taikhoan.php";
     include "../model/binhluan.php";
+    include "../model/thongke.php";
     define("BASE_URL", "http://localhost:8080/DUANMAU/");
     // controller
 
@@ -150,7 +151,14 @@
                 $listBinhLuan = loadAll_binhluan(0);
                 include "binhluan/list.php";
                 break;
-                        
+            case 'thongke':
+                $listthongke = loadall_thongke();
+                include "thongke/list.php";
+                break;
+            case 'bieudo':
+                $listbieudo = loadall_thongke();
+                include "thongke/bieudo.php";
+                break;          
                     
                 
 

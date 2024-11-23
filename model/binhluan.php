@@ -5,15 +5,18 @@ function insert_binhluan($noiDung , $iduser , $idpro , $ngayBinhLuan){
     pdo_execute($sql);
 }
 
-function loadAll_binhluan($idpro){
+function loadAll_binhluan($idpro) {
     $sql = "SELECT * FROM binhluan WHERE 1";
-    if($idpro > 0){
-        $sql.= "AND idpro = $idpro ";
-    }else {
-        $sql.=" order by id desc";
+    $params = [];
+
+    if ($idpro > 0) {
+        $sql .= " AND idpro = :idpro";
+        $params[':idpro'] = $idpro;   
     }
-    $listBinhLuan = pdo_query($sql);
-    return $listBinhLuan;
+
+    $sql .= " ORDER BY id DESC"; 
+    return pdo_query($sql, $params); 
 }
+
     
 ?>

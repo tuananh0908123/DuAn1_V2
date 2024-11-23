@@ -133,6 +133,15 @@ header h1 {
     border-bottom: 1px #ccc solid;
 }
 
+.boxfooter {
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: 1px #ccc solid;
+    border-right: 1px #ccc solid;
+    border-bottom: 1px #ccc solid;
+}
+
 .banner {
     min-height: 300px;
     width: 100%;
@@ -184,7 +193,7 @@ header h1 {
 .menu ul {
     list-style-type: none;
     display: flex;
-    background-color: #F9F1E7;
+    background-color: #726453;
     width: 1200px;
     height: 70px;
     border: 1px solid none;
