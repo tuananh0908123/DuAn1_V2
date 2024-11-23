@@ -36,7 +36,7 @@ function loadAll_sanpham_home(){
 }
 
 function loadAll_sanpham_top6(){
-    $sql = "SELECT * from sanpham where 1 order by luotxem desc limit 0,6";
+    $sql = "SELECT * from sanpham where 1 order by luotxem desc limit 0,7";
     $listSanPham = pdo_query($sql);
     return $listSanPham;
 }
