@@ -131,7 +131,7 @@
                     </div>
                     <div class="col l-4 m-4 c-12">
                         <div class="footer__info">
-                            <div class="footer__info-brand-desc" >
+                            <div class="footer__info-brand-desc">
                                 FANPAGE FACEBOOK
                             </div>
 
