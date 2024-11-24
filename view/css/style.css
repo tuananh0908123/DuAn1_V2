@@ -620,3 +620,8 @@ img {vertical-align: middle;}
 .binhluanform input[type="submit"]:hover {
     background-color: #45a049;
 }
+
+.logo {
+    margin-bottom:163px ; 
+    margin-right:50px;
+}
