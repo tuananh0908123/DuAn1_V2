@@ -134,7 +134,6 @@
                             <div class="footer__info-brand-desc">
                                 FANPAGE FACEBOOK
                             </div>
-
                         </div>
                         <div class="footer_info-desc">
                             <p>
