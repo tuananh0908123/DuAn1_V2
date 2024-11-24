@@ -1,6 +1,6 @@
 <div class="row mb">
     <div class="boxtrai mr" style="margin-bottom: auto;">
-    
+
         <div class="row mb">
             <?php if (isset($onesp)): ?>
                 <div class="boxtitle"><?= htmlspecialchars($onesp['name']) ?></div>
@@ -9,6 +9,12 @@
                     <div class="row mb">
                         <img class="spct" src="<?= htmlspecialchars(BASE_URL . $onesp['img']) ?>" alt="Hình ảnh sản phẩm">
                     </div>
+                    <div class="quantity">
+                        <label for="quantity">Số lượng:</label>
+                        <input type="number" id="quantity" name="quantity" value="1" min="1" style="width: 60px;">
+                        <button class="add-to-cart" data-id="<?= htmlspecialchars($id) ?>">Thêm vào giỏ hàng</button>
+                    </div>
+
                 </div>
             <?php else: ?>
                 <p>Không tìm thấy thông tin sản phẩm.</p>
