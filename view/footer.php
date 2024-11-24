@@ -96,7 +96,7 @@
                     </div>
                     <div class="col l-4 m-4 c-12">
                         <div class="row">
-                            <div class="col l-6 m-6 c-6 logo" >
+                            <div class="col l-6 m-6 c-6" >
                                 <div class="footer__info">
                                     <div class="footer__info-brand-desc">
                                         TẢI VÀ CÀI ĐẶT ỨNG DỤNG TECHSHOP

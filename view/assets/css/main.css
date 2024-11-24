@@ -677,20 +677,8 @@ html {
 /* Footer */
 .footer {
     position: relative;
-    background: url(../img/footer.webp) top center / cover;
+    background: url(view/assets/img/footer.webp) top center / cover;
     background-size: auto;
-}
-
-.footer * {
- 
-}
-
-.footer-banner {
-
-}
-
-.footer-content {
-  
 }
 
 .footer__info-brand + .footer__info-brand-desc {

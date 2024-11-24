@@ -33,7 +33,7 @@
 
                 <li style="margin-left:220px"><a href="index.php">Home</a></li>
                 <li>
-                    <a href="index.php?act='danhmuc'">Shop</a>
+                    <a href="">Shop</a>
     </li>
 
                 <li><a href="index.php?act=gioithieu">About</a></li>
