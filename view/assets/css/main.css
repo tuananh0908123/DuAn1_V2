@@ -677,7 +677,7 @@ html {
 /* Footer */
 .footer {
     position: relative;
-    background: url(view/assets/img/footer.webp) top center / cover;
+    background: url(../img/footer.webp) top center / cover;
     background-size: auto;
 }
 

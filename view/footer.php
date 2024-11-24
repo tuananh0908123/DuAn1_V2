@@ -73,7 +73,7 @@
         <div class="footer-content-inner">
             <div class="grid wide">
                 <div class="row">
-                    <div class="col l-4 m-4 c-12">
+                    <div class="col l-4 m-4 c-12" style="margin-bottom: 17px;">
                         <div class="footer__info">
                             <div class="footer__info-brand">
                                 <img src="view/images/logo1.png" alt="" class="footer__info-brand-logo">
@@ -94,7 +94,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col l-4 m-4 c-12" style="margin-bottom:156px ; margin-right:50px">
+                    <div class="col l-4 m-4 c-12" style="margin-bottom:163px ; margin-right:50px">
                         <div class="row">
                             <div class="col l-6 m-6 c-6">
                                 <div class="footer__info">
@@ -109,7 +109,7 @@
                                     <img src="view/assets/img/chplay.png" alt="">
                                 </div>
                             </div>
-                            <div class="col l-6 m-6 c-6">
+                            <div class="col l-6 m-6 c-6" style="margin-left: 40px;margin-top:162px">
                                 <div class="footer__info">
                                     <div class="footer__info-brand-desc">
                                         HỆ THỐNG CỬA HÀNG TECHSHOP
@@ -131,7 +131,7 @@
                     </div>
                     <div class="col l-4 m-4 c-12">
                         <div class="footer__info">
-                            <div class="footer__info-brand-desc">
+                            <div class="footer__info-brand-desc" >
                                 FANPAGE FACEBOOK
                             </div>
 
