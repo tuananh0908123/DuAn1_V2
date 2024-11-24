@@ -57,9 +57,7 @@
 
 </html>
 <link rel="icon" href="view/assets/img/icotittle.png" type="image/gif" sizes="16x16">
-<link rel="stylesheet" href="view/assets/css/base.css">
 <link rel="stylesheet" href="view/assets/css/main.css">
-<link rel="stylesheet" href="view/assets/css/booking.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="view/assets/js/script.js"></script>
 <script src="view/assets/js/carousel.js"></script>
