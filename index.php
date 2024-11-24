@@ -136,7 +136,7 @@
             case 'giohang' :
                 include "view/giohang.php";
                 break;
-            
+
             default :
                 include "view/home.php";
                 break;

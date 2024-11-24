@@ -67,10 +67,11 @@ body {
 
 .footer {
     border: 1px solid;
-    font-size: 0.8vw;
+    font-size: 62.5%;
     border-radius: 5px;
     padding: 20px;
 }
+
 
 header h1 {
     margin: 20px;
@@ -211,7 +212,7 @@ header h1 {
     color: #CCC;
     text-decoration: none;
     transition: 0.5s;
-    padding: 10px;
+    padding: 30px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }

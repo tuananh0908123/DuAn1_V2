@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,10 +32,13 @@
                 </li>
 
                 <li style="margin-left:220px"><a href="index.php">Home</a></li>
-                <li><a href="index.php?act=">Shop</a></li>
+                <li>
+                    <a href="index.php?act='danhmuc'">Shop</a>
+    </li>
+
                 <li><a href="index.php?act=gioithieu">About</a></li>
                 <li><a href="index.php?act=lienhe">Contact</a></li>
-                <li style="margin-left:300px"><a href="index.php?act=hoidap">❓</a></li>
+                <li style="margin-left:38px"><a href="index.php?act=hoidap">❓</a></li>
                 <li><a href="index.php?act=giohang">🛒</a></li>
                 <li style="position: relative;"
                     onmouseover="showSearchInput()"
@@ -53,3 +57,5 @@
 
             </ul>
         </div>
+
+   

@@ -5,6 +5,7 @@
     --blue-color: #4E85B7;
 }
 
+
 * {
     margin: 0;
     padding: 0;
@@ -676,8 +677,12 @@ html {
 /* Footer */
 .footer {
     position: relative;
-    background: url(../img/bg_footer.jpg) top center / cover;
-    
+    background: url(../img/footer.webp) top center / cover;
+    background-size: auto;
+}
+
+.footer * {
+ 
 }
 
 .footer-banner {
@@ -694,7 +699,7 @@ html {
 
 .footer__info-brand-desc {
     color: #fff;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: bold;
     text-align: left;
     display: flex;
@@ -713,7 +718,7 @@ html {
 
 .footer_info-desc {
     color: #fff;
-    font-size: 1.4rem;
+    font-size: 0.8rem;
     line-height: 2.7rem;
     font-family: "Roboto";
     margin-top: 20px;
@@ -723,6 +728,7 @@ html {
     width: 90%;
     max-width: 160px;
     display: block;
+    
 }
 
 .footer-content-inner {
