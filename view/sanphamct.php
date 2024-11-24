@@ -1,4 +1,3 @@
-
 <div class="row mb">
     <div class="boxtrai mr" style="margin-bottom: auto;">
 
@@ -22,7 +21,9 @@
                 $(document).ready(function() {
                     const idpro = <?= isset($onesp['id']) ? json_encode($onesp['id']) : 'null' ?>;
                     if (idpro) {
-                        $("#binhluan").load("view/binhluan/binhluanform.php", { idpro: idpro });
+                        $("#binhluan").load("view/binhluan/binhluanform.php", {
+                            idpro: idpro
+                        });
                     }
                 });
             </script>
@@ -54,4 +55,3 @@
         <?php include "boxright.php"; ?>
     </div>
 </div>
-

@@ -35,7 +35,8 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        h2, h3 {
+        h2,
+        h3 {
             color: #2E3B4E;
             font-size: 1.8em;
             margin-bottom: 20px;
@@ -49,7 +50,7 @@
         ul {
             list-style-type: none;
 
-        } 
+        }
 
         ul li {
             background: url('check-icon.png') no-repeat left center;
@@ -112,13 +113,6 @@
             <li>Đội ngũ nhân viên thân thiện, giàu kinh nghiệm.</li>
         </ul>
 
-        <h3>Liên Hệ Với Chúng Tôi</h3>
-        <p>Hãy ghé thăm cửa hàng của chúng tôi hoặc liên hệ qua thông tin dưới đây:</p>
-        <p>
-            <b>Địa chỉ:</b> Số 123, Đường Công Nghệ, Quận 1, TP. Hồ Chí Minh<br>
-            <b>Email:</b> <a href="mailto:support@techshop.vn">support@techshop.vn</a><br>
-            <b>Số điện thoại:</b> 0123-456-789<br>
-        </p>
     </main>
 </body>
 
