@@ -1,70 +1,157 @@
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
 
-    <div>
-        <footer style="color: #ffffff; padding: 20px 0; text-align: center; max-width:1200px ">
-    <div style="max-width: 1200px; margin: auto; padding: 0 20px;">
-        <!-- Thông tin liên hệ -->
-        <div style="margin-bottom: 20px;; color: #fff; text-align: center; padding: 10px 0;">
-        
-            <h3 style="margin-bottom: 10px; color: #00d4ff;">Tech Shop</h3>
-            <p style="color: #777;">Email: support@techshop.com</p>
-            <p style="color: #777;">Hotline: +84 123 456 789</p>
-            
-        
-
-        <!-- Liên kết nhanh -->
-        
-        <div style="margin-bottom: 20px;">
-            <ul style="list-style: none; padding: 0; margin: 0;">
-                <li style="display: inline; margin: 0 15px;"><a href="index.php" style="color: #00d4ff; text-decoration: none;">Home</a></li>
-                <li style="display: inline; margin: 0 15px;"><a href="#" style="color: #00d4ff; text-decoration: none;">Shop</a></li>
-                <li style="display: inline; margin: 0 15px;"><a href="#" style="color: #00d4ff; text-decoration: none;">About</a></li>
-                <li style="display: inline; margin: 0 15px;"><a href="#" style="color: #00d4ff; text-decoration: none;">Contact</a></li>
-            </ul>
-        </div>
-
-        <!-- Mạng xã hội -->
-        <div style="margin-bottom: 20px;">
-            <a href="#" style="margin: 0 10px; color: #00d4ff; text-decoration: none;">Facebook</a>
-            <a href="#" style="margin: 0 10px; color: #00d4ff; text-decoration: none;">Twitter</a>
-            <a href="#" style="margin: 0 10px; color: #00d4ff; text-decoration: none;">Instagram</a>
-        </div>
-
-        <!-- Bản quyền -->
-        <div>
-            <p style="font-size: 14px; color: #777;">&copy; 2024 Tech Shop. All rights reserved.</p>
-        </div>
-    </div>
-</footer>
-</div>
-        
-    </div>
-    <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
+    function plusSlides(n) {
         showSlides(slideIndex += n);
-        }
+    }
 
-        function currentSlide(n) {
+    function currentSlide(n) {
         showSlides(slideIndex = n);
-        }
+    }
 
-        function showSlides(n) {
+    function showSlides(n) {
         let i;
         let slides = document.getElementsByClassName("mySlides");
         let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}    
-        if (n < 1) {slideIndex = slides.length}
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
         for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
+            slides[i].style.display = "none";
         }
         for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" active", "");
         }
-        slides[slideIndex-1].style.display = "block";  
-        dots[slideIndex-1].className += " active";
-        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
 </script>
+<div>
+    <footer style="padding: 20px 0; text-align: center">
+
+
+
+
+        <div style="margin-bottom: 20px;">
+
+
+        </div>
+
+        <div style="margin-bottom: 20px;">
+        </div>
+
+
+        <div>
+            <p style="font-size: 20px; color: #777; text-align:center">2024 Tech Shop. All rights reserved.</p>
+        </div>
+</div>
+</footer>
+</div>
+
+</div>
 </body>
+
 </html>
+<link rel="icon" href="view/assets/img/icotittle.png" type="image/gif" sizes="16x16">
+<link rel="stylesheet" href="view/assets/css/base.css">
+<link rel="stylesheet" href="view/assets/css/main.css">
+<link rel="stylesheet" href="view/assets/css/booking.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="view/assets/js/script.js"></script>
+<script src="view/assets/js/carousel.js"></script>
+<link rel="stylesheet" href="view/assets/font/fontawesome-free-5.15.3-web/css/all.min.css">
+<link href="http://fonts.cdnfonts.com/css/davida-bold" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-content-inner">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-4 m-4 c-12">
+                        <div class="footer__info">
+                            <div class="footer__info-brand">
+                                <img src="view/images/logo1.png" alt="" class="footer__info-brand-logo">
+                            </div>
+                            <div class="footer__info-brand-desc">
+                                CÔNG TY CỔ PHẦN ĐẦU TƯ THƯƠNG MẠI VÀ DỊCH VỤ TECHSHOP VIỆT NAM
+                            </div>
+                        </div>
+                        <div class="footer_info-desc">
+                            <p>TRỤ SỞ CHÍNH
+                                <br>Tầng 2, Tòa nhà Tech Plaza,
+                                <br>123 Nguyễn Văn Cừ, Quận 1, TP.HCM
+                                <br>CHI NHÁNH
+                                <br>45 Lê Duẩn, Phường Bến Nghé,
+                                <br>Quận 1, TP.HCM
+                                <br>LIÊN HỆ
+                                <br>090 1234 567 hoặc 090 1234 568
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-4 c-12">
+                        <div class="row">
+                            <div class="col l-6 m-6 c-6">
+                                <div class="footer__info">
+                                    <div class="footer__info-brand-desc">
+                                        TẢI VÀ CÀI ĐẶT ỨNG DỤNG TECHSHOP
+                                    </div>
+                                </div>
+                                <div class="footer_info-desc">
+                                    iOS
+                                    <img src="view/assets/img/appstore.png" alt="">
+                                    ANDROID
+                                    <img src="view/assets/img/chplay.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col l-6 m-6 c-6">
+                                <div class="footer__info">
+                                    <div class="footer__info-brand-desc">
+                                        HỆ THỐNG CỬA HÀNG TECHSHOP
+                                    </div>
+                                </div>
+                                <div class="footer_info-desc">
+                                    <p>GIỜ MỞ CỬA
+                                        <br>9:00 - 21:00
+                                        <br>HOTLINE
+                                        <br>1900 36 6650
+                                        <br>hoặc
+                                        <br>024 3902 8999
+                                        <br>EMAIL
+                                        <br>contact@techshop.com
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-4 c-12">
+                        <div class="footer__info">
+                            <div class="footer__info-brand-desc">
+                                FANPAGE FACEBOOK
+                            </div>
+
+                        </div>
+                        <div class="footer_info-desc">
+                            <p>
+                                https://www.facebook.com/techshop/
+                            </p>
+                            <p class="footer_info-login-count">
+                                Bạn đã truy cập: <span class="footer_info-number-count"></span> lần
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+<div class="scrollTop">
+    <i class="fas fa-chevron-up"></i>
+</div>

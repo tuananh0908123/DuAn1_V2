@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liên Hệ - Techshop</title>
     <script>
-        
         const form = document.getElementById('contact-form');
         const nameInput = document.getElementById('name');
         const emailInput = document.getElementById('email');
@@ -15,20 +14,20 @@
         const emailError = document.getElementById('email-error');
         const messageError = document.getElementById('message-error');
 
-        
-        form.addEventListener('submit', function (e) {
-         
+
+        form.addEventListener('submit', function(e) {
+
             e.preventDefault();
 
-            
+
             nameError.textContent = '';
             emailError.textContent = '';
             messageError.textContent = '';
 
-          
+
             let isValid = true;
 
-                
+
             if (nameInput.value.trim() === '') {
                 nameError.textContent = 'Họ và Tên là bắt buộc.';
                 isValid = false;
@@ -50,7 +49,7 @@
 
             if (isValid) {
                 alert('Tin nhắn đã được gửi thành công!');
-                form.reset();  
+                form.reset();
             }
         });
     </script>
@@ -142,7 +141,7 @@
 
         .map-container {
             position: relative;
-            padding-bottom: 56.25%; 
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
             max-width: 100%;
@@ -183,10 +182,11 @@
         <div class="contact-info">
             <div>
                 <h3>Thông Tin Liên Hệ</h3>
-                <p><strong>Địa chỉ:</strong> Số 123, Đường Công Nghệ, Quận 1, TP. Hồ Chí Minh</p>
-                <p><strong>Email:</strong> <a href="mailto:support@techshop.vn">support@techshop.vn</a></p>
-                <p><strong>Số điện thoại:</strong> 0123-456-789</p>
-                <p><strong>Giờ làm việc:</strong> Thứ 2 - Thứ 6, 8:00 AM - 6:00 PM</p>
+                <p><strong>Địa chỉ:</strong> Tầng 2, Tòa nhà Tech Plaza,
+                123 Nguyễn Văn Cừ, Quận 1, TP.HCM</p>
+                <p><strong>Email:</strong> <a href="mailto:contact@techshop.com">contact@techshop.com</a></p>
+                <p><strong>Số điện thoại:</strong> 090 1234 568</p>
+                <p><strong>Giờ làm việc:</strong> Thứ 2 - Thứ 6, 9:00 - 21:00</p>
             </div>
             <div>
                 <h3>Gửi Tin Nhắn</h3>
