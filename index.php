@@ -43,6 +43,7 @@
                 } else {
                     include "view/home.php";
                 }
+                
                 break;
             case 'dangki' :
                 $thongBaoThanhCong = "";

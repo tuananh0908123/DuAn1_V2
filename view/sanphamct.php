@@ -1,6 +1,6 @@
 <div class="row mb">
     <div class="boxtrai mr" style="margin-bottom: auto;">
-
+    
         <div class="row mb">
             <?php if (isset($onesp)): ?>
                 <div class="boxtitle"><?= htmlspecialchars($onesp['name']) ?></div>

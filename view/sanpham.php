@@ -21,9 +21,11 @@
                             <a style="text-decoration: none; color :black" href="index.php?act=sanphamct&idsp=<?= $sanPham['id'] ?>">
                                 <p class="words"><?= $sanPham['name'] ?></p>
                             </a>
+                            
                             <center>
                                 <td style="font-size: 5px;"><?= $sanPham['price'] ?>$</td>
                             </center>
+                        
                         </tr>
                     </div>
                 <?php } ?>
