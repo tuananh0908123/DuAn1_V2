@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,7 +33,7 @@
                 <li style="margin-left:220px"><a href="index.php">Home</a></li>
                 <li>
                     <a href="">Shop</a>
-    </li>
+                </li>
 
                 <li><a href="index.php?act=gioithieu">About</a></li>
                 <li><a href="index.php?act=lienhe">Contact</a></li>
@@ -57,5 +56,3 @@
 
             </ul>
         </div>
-
-   
