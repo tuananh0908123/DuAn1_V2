@@ -134,7 +134,7 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             include "view/giohang.php";
             break;
 
-              case 'thongke':
+        case 'thongke':
             $listthongke = loadall_thongke();
             include "thongke/list.php";
             break;
