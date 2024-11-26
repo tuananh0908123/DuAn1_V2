@@ -130,6 +130,9 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             include "view/lienhe.php";
             break;
 
+        case 'hoidap':
+            include "view/hoidap.php";
+            break; 
         case 'giohang':
             include "view/giohang.php";
             break;
