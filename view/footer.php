@@ -31,23 +31,7 @@
     }
 </script>
 <div>
-    <footer style="padding: 20px 0; text-align: center">
-
-
-
-
-        <div style="margin-bottom: 20px;">
-
-
-        </div>
-
-        <div style="margin-bottom: 20px;">
-        </div>
-
-
-        <div>
-            <p style="font-size: 20px; color: #777; text-align:center">2024 Tech Shop. All rights reserved.</p>
-        </div>
+    
 </div>
 </footer>
 </div>

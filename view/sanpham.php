@@ -1,5 +1,5 @@
 <div class="row mb">
-    <div style="margin-bottom: auto; width :auto;" class="boxtrai mr">
+    <center><div style="margin-bottom: auto; width :1472px;" class="boxtrai mr">
         <div class="row mb">
             <div class="boxtitle"><strong><?= $tendm; ?></strong></div>
             <div class="row boxcontent">
@@ -29,6 +29,6 @@
                         </tr>
                     </div>
                 <?php } ?>
-            </div>
+            </div></center>
         </div>
 </div>

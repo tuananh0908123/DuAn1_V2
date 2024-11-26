@@ -35,7 +35,7 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1512px;
             background-color: white;
             padding: 30px;
             border-radius: 8px;
@@ -76,7 +76,7 @@
 <body>
     <div class="container">
         <h1>Form Hỏi Đáp</h1>
-        <form id="questionForm" action="index.php?act=hoidap" method="POST" onsubmit="return validateForm()">
+        <form id="questionForm" style="width:1454px" action="index.php?act=hoidap" method="POST" onsubmit="return validateForm()">
             <div class="mb-3">
                 <label for="name" class="form-label d-block">Tên của bạn:</label>
                 <input type="text" id="name" name="name" class="form-control" placeholder="Nhập tên của bạn" required>
