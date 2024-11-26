@@ -31,32 +31,21 @@
     }
 </script>
 <div>
-    <footer style="padding: 20px 0; text-align: center">
 
-
-
-
-        <div style="margin-bottom: 20px;">
-
-
-        </div>
-
-        <div style="margin-bottom: 20px;">
-        </div>
-
-
-        <div>
-            <p style="font-size: 20px; color: #777; text-align:center">2024 Tech Shop. All rights reserved.</p>
-        </div>
-</div>
-</footer>
 </div>
 
 </div>
 </body>
 
 </html>
-<link rel="icon" href="view/assets/img/icotittle.png" type="image/gif" sizes="16x16">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
 <link rel="stylesheet" href="view/assets/css/main.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="view/assets/js/script.js"></script>
@@ -72,13 +61,13 @@
         <div class="footer-content-inner">
             <div class="grid wide">
                 <div class="row">
-                    <div class="col l-4 m-4 c-12">
-                        <div class="footer__info" >
-                            <div class="footer__info-brand">
+                    <div class="col l-4 m-4 c-12" style="margin-bottom: 17px">
+                        <div class="footer__info">
+                         <div class="footer__info-brand">
                                 <img src="view/images/logo1.png" alt="" class="footer__info-brand-logo">
                             </div>
                             <div class="footer__info-brand-desc">
-                                CÔNG TY CỔ PHẦN ĐẦU TƯ THƯƠNG MẠI VÀ DỊCH VỤ TECHSHOP VIỆT NAM
+                                CÔNG TY CỔ PHẦN ĐẦU TƯ THƯƠNG MẠI <br> VÀ DỊCH VỤ TECHSHOP VIỆT NAM
                             </div>
                         </div>
                         <div class="footer_info-desc">
@@ -93,12 +82,12 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col l-4 m-4 c-12">
+                    <div class="col l-4 m-4 c-12" style="margin-bottom:163px ; margin-right:50px">
                         <div class="row">
                             <div class="col l-6 m-6 c-6">
 
                             </div>
-                            <div class="col l-6 m-6 c-6">
+                            <div class="col l-6 m-6 c-6" style="margin-left: 40px;margin-top:162px">
                                 <div class="footer__info">
                                     <div class="footer__info-brand-desc">
                                         HỆ THỐNG CỬA HÀNG TECHSHOP
@@ -123,7 +112,6 @@
                             <div class="footer__info-brand-desc">
                                 FANPAGE FACEBOOK
                             </div>
-
                         </div>
                         <div class="footer_info-desc">
                             <p>
@@ -149,3 +137,5 @@
 <div class="scrollTop">
     <i class="fas fa-chevron-up"></i>
 </div>
+</body>
+</html>
