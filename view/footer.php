@@ -57,9 +57,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-
-<body>
+    
+    <link rel="icon" href="view/assets/img/icotittle.png" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="view/assets/css/main.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="view/assets/js/script.js"></script>
@@ -70,6 +69,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-content-inner">
@@ -77,13 +79,11 @@
                     <div class="row">
                         <div class="col l-4 m-4 c-12" style="margin-bottom: 17px;">
                             <div class="footer__info">
-                            </div>
-                        </div>
-                        <div class="footer__info-brand">
-                            <img src="view/images/logo1.png" alt="" class="footer__info-brand-logo">
-                        </div>
-                        <div class="footer__info-brand-desc">
-                            CÔNG TY CỔ PHẦN ĐẦU TƯ THƯƠNG MẠI <br> VÀ DỊCH VỤ TECHSHOP VIỆT NAM
+                                <div class="footer__info-brand">
+                                    <img src="view/images/logo1.png" alt="" class="footer__info-brand-logo">
+                                </div>
+                                <div class="footer__info-brand-desc">
+                                    CÔNG TY CỔ PHẦN ĐẦU TƯ THƯƠNG MẠI VÀ DỊCH VỤ TECHSHOP VIỆT NAM
                         </div>
                     </div>
                     <div class="footer_info-desc">

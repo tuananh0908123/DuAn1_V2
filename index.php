@@ -3,7 +3,6 @@ session_start();
 include "model/pdo.php";
 include "model/sanpham.php";
 include "view/header.php";
-
 define("BASE_URL", "http://localhost/duan11/");
 include "model/danhmuc.php";
 include "model/taikhoan.php";
@@ -51,11 +50,12 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
                 $user = $_POST['user'];
                 $pass = $_POST['pass'];
                 $dangki = insert_taikhoan($email, $user, $pass);
-                if ($dangki) {
+                if (!$dangki) {
                     $thongBaoThanhCong = "Đăng kí thành công. Mời bạn chuyển sang đăng nhập.";
                     // echo "<script>window.location.href='view/index.php'</script>";
                 } else {
                     $thongBaoLoi = "Đăng kí thất bại. Mời bạn đăng kí hoặc kiểm tra lại các thông tin.";
+                    include "view/home.php"; // Di chuyển include vào đây để xử lý lỗi
                 }
             }
             include "view/taikhoan/dangki.php";
