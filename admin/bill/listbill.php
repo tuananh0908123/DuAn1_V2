@@ -1,63 +1,34 @@
-<div class="row">
+<?php
+session_start();
+include "model/pdo.php"; // Kết nối CSDL
 
-    <div class="row frmtitle mb" >
-        <h1>DANH SÁCH ĐƠN HÀNG</h1>
-    </div class="row frmcontent">
-    <form action="index.php?act=listbill" method="post">
-        <input type="text" name="kyw" placeholder="Nhập Mã Đơn Hàng">
-        <input type="submit" name="listok" value="GO">
-    </form>
-    <div class="row frmcontent">
-        <div class="row mb10 frmdsloai">
-            <table >
-                <tr>
-                    <th>STT</th>
-                    <th>Người nhận</th>
-                    <th>Địa chỉ</th>
-                    <th>Số điện thoại</th>
-                    <th>Email</th>
-                    <th>Sản phẩm</th>
-                    <th>Ngày mua</th>
-                    <th>Tổng tiền</th>
-                    <th>Trạng thái</th>
-                    <th></th>
-                </tr>
-                <?php
-                $i=0;
-                foreach ($listbill as $bill){
-                extract($bill);
-                    echo '  
-                    <tr>
-                         <td>'.($i+1).'</td>
-                         <td>'.$user.' </td>
-                         <td>'.$address.' </td>
-                         <td>'.$tel.' </td>
-                         <td>'.$email.' </td>
-                         <td>'.$name.' </td>
-                         <td>'.$order_date.' </td>
-                         <td>'.$total_amount.' </td>
-                         <td>'.$trangthai.' </td>
-                         <td>
-                            <form method="post" action="index.php?act=updateStatus">
-                                <input type="hidden" name="iddh" value="'.$id.'">
-                                <select name="trangthai">
-                                    <option value="Đang xử lý"'.($trangthai == "Đang xử lý" ? " selected" : "").'>Đang xử lý</option>
-                                    <option value="Đã xử lý"'.($trangthai == "Đã xử lý" ? " selected" : "").'>Đã xử lý</option>
-                                    <option value="Hủy"'.($trangthai == "Hủy" ? " selected" : "").'>Hủy</option>
-                                    <option value="Đang giao"'.($trangthai == "Đang giao" ? " selected" : "").'>Đang giao</option>
-                                    <option value="Đã giao"'.($trangthai == "Đã giao" ? " selected" : "").'>Đã giao</option>
-                                </select>
-                                <input type="submit" value="Cập nhật">
-                            </form>
-                        </td>
-                    </tr>';
-                    $i++;
-                }
-                ?>
-                </table>
+function loadAllBills() {
+    global $pdo;
+    $sql = "SELECT * FROM donhang ORDER BY id DESC";
+    return $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+}
 
-        </div>
+$bills = loadAllBills();
 
+echo "<h2>Danh sách đơn hàng</h2>";
+if (count($bills) > 0) {
+    echo "<table>";
+    echo "<tr><th>ID</th><th>Người nhận</th><th>Địa chỉ</th><th>SĐT</th><th>Email</th><th>Sản phẩm</th><th>Ngày mua</th><th>Tổng tiền</th></tr>";
 
-    </div>
-</div>
+    foreach ($bills as $bill) {
+        echo "<tr>";
+        echo "<td>{$bill['id']}</td>";
+        echo "<td>{$bill['user']}</td>";
+        echo "<td>{$bill['address']}</td>";
+        echo "<td>{$bill['tel']}</td>";
+        echo "<td>{$bill['email']}</td>";
+        echo "<td>{$bill['sanpham_id']}</td>"; // Cần thêm logic để lấy tên sản phẩm
+        echo "<td>{$bill['oder_date']}</td>";
+        echo "<td>{$bill['total_amout']}</td>";
+        echo "</tr>";
+    }
+    echo "</table>";
+} else {
+    echo "<p>Chưa có đơn hàng nào.</p>";
+}
+?>
