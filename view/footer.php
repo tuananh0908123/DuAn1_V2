@@ -63,7 +63,7 @@
                 <div class="row">
                     <div class="col l-4 m-4 c-12" style="margin-bottom: 17px">
                         <div class="footer__info">
-                            <div class="footer__info-brand">
+                         <div class="footer__info-brand">
                                 <img src="view/images/logo1.png" alt="" class="footer__info-brand-logo">
                             </div>
                             <div class="footer__info-brand-desc">
@@ -85,17 +85,7 @@
                     <div class="col l-4 m-4 c-12" style="margin-bottom:163px ; margin-right:50px">
                         <div class="row">
                             <div class="col l-6 m-6 c-6">
-                                <div class="footer__info">
-                                    <div class="footer__info-brand-desc">
-                                        TẢI VÀ CÀI ĐẶT ỨNG DỤNG TECHSHOP
-                                    </div>
-                                </div>
-                                <div class="footer_info-desc">
-                                    iOS
-                                    <img src="view/assets/img/appstore.png" alt="">
-                                    ANDROID
-                                    <img src="view/assets/img/chplay.png" alt="">
-                                </div>
+
                             </div>
                             <div class="col l-6 m-6 c-6" style="margin-left: 40px;margin-top:162px">
                                 <div class="footer__info">
@@ -136,6 +126,12 @@
             </div>
         </div>
     </div>
+    <div class="footer_info-desc" style="font-size: 40px; text-align: center;">
+    <span>iOS</span>
+    <img src="view/assets/img/appstore.png" alt="App Store" style="width: 150px; vertical-align: middle; margin: 0 5px;">
+    <span>ANDROID</span>
+    <img src="view/assets/img/chplay.png" alt="Google Play" style="width: 150px; vertical-align: middle; margin: 0 5px;">
+</div>
 </footer>
 </div>
 <div class="scrollTop">

@@ -57,6 +57,8 @@
                         <center>
                             <td style="font-size: 5px;"><?= $sanPham['price'] ?>$</td>
                         </center>
+                        <div style="text-align: center;" ><button class="fa fa-shopping-cart" name="addtocart"></button></div>
+                        
                     </tr>
                 </div>
             <?php } ?>

@@ -41,6 +41,7 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             } else {
                 include "view/home.php";
             }
+
             break;
         case 'dangki':
             $thongBaoThanhCong = "";
@@ -51,11 +52,10 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
                 $pass = $_POST['pass'];
                 $dangki = insert_taikhoan($email, $user, $pass);
                 if (!$dangki) {
-                    $thongBaoThanhCong = "Đăng kí thành công. Mời bạn chuyển sang đăng nhập.";
-                    // echo "<script>window.location.href='view/index.php'</script>";
+                    $thongBaoThanhCong = "Đăng kí thành công . Mời bạn chuyển sang đăng nhập";
+                    // echo "<script>window.location.href='view/index.php'/script>";
                 } else {
-                    $thongBaoLoi = "Đăng kí thất bại. Mời bạn đăng kí hoặc kiểm tra lại các thông tin.";
-                    include "view/home.php"; // Di chuyển include vào đây để xử lý lỗi
+                    $thongBaoLoi = "Đăng kí thất bại . Mời bạn đăng kí hoặc kiểm tra lại các thông tin";
                 }
             }
             include "view/taikhoan/dangki.php";
@@ -72,7 +72,7 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
                     $thongBaoThanhCong = "Đăng nhập thành công";
                     echo "<script>window.location.href='index.php'</script>";
                 } else {
-                    $thongBaoLoi = "Tài khoản không tồn tại. Vui lòng kiểm tra hoặc đăng kí.";
+                    $thongBaoLoi = "Tài khoản không tồn tại . Vui lòng kiểm tra hoặc đăng kí";
                 }
             }
             include "view/taikhoan/dangki.php";
@@ -90,8 +90,11 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
                 update_taikhoan($id, $user, $pass, $email, $address, $tel);
                 $_SESSION['user'] = checkuser($user, $pass);
                 $thongBaoThanhCong = "Cập nhật thành công";
+                echo "<script>window.location.href='index.php'</script>";
             }
+            include "view/taikhoan/edit_taikhoan.php";
             break;
+
         case 'quenmk':
             $thongBaoThanhCong = "";
             $thongBaoLoi = "";
@@ -127,11 +130,20 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             include "view/lienhe.php";
             break;
 
-        case 'hoidap':
-            include "view/hoidap.php";
-            break;
         case 'giohang':
             include "view/giohang.php";
+            break;
+
+              case 'thongke':
+            $listthongke = loadall_thongke();
+            include "thongke/list.php";
+            break;
+        case 'bieudo':
+            $listbieudo = loadall_thongke();
+            include "thongke/bieudo.php";
+            break;    
+        case 'hoidap':
+            include "view/hoidap.php";
             break;
 
         default:
