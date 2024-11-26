@@ -51,11 +51,11 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
                 $user = $_POST['user'];
                 $pass = $_POST['pass'];
                 $dangki = insert_taikhoan($email, $user, $pass);
-                if (!$dangki) {
-                    $thongBaoThanhCong = "Đăng kí thành công . Mời bạn chuyển sang đăng nhập";
-                    // echo "<script>window.location.href='view/index.php'/script>";
+                if ($dangki) {
+                    $thongBaoThanhCong = "Đăng kí thành công. Mời bạn chuyển sang đăng nhập.";
+                    // echo "<script>window.location.href='view/index.php'</script>";
                 } else {
-                    $thongBaoLoi = "Đăng kí thất bại . Mời bạn đăng kí hoặc kiểm tra lại các thông tin";
+                    $thongBaoLoi = "Đăng kí thất bại. Mời bạn đăng kí hoặc kiểm tra lại các thông tin.";
                 }
             }
             include "view/taikhoan/dangki.php";
@@ -72,7 +72,7 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
                     $thongBaoThanhCong = "Đăng nhập thành công";
                     echo "<script>window.location.href='index.php'</script>";
                 } else {
-                    $thongBaoLoi = "Tài khoản không tồn tại . Vui lòng kiểm tra hoặc đăng kí";
+                    $thongBaoLoi = "Tài khoản không tồn tại. Vui lòng kiểm tra hoặc đăng kí.";
                 }
             }
             include "view/taikhoan/dangki.php";
@@ -90,11 +90,8 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
                 update_taikhoan($id, $user, $pass, $email, $address, $tel);
                 $_SESSION['user'] = checkuser($user, $pass);
                 $thongBaoThanhCong = "Cập nhật thành công";
-                echo "<script>window.location.href='index.php'</script>";
             }
-            include "view/taikhoan/edit_taikhoan.php";
             break;
-
         case 'quenmk':
             $thongBaoThanhCong = "";
             $thongBaoLoi = "";
@@ -132,7 +129,7 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
 
         case 'hoidap':
             include "view/hoidap.php";
-            break; 
+            break;
         case 'giohang':
             include "view/giohang.php";
             break;
@@ -141,7 +138,6 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             include "view/home.php";
             break;
     }
-
 } else {
     include "view/home.php";
 }
