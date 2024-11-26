@@ -71,7 +71,7 @@
         <div class="footer-content-inner">
             <div class="grid wide">
                 <div class="row">
-                    <div class="col l-4 m-4 c-12" style="margin-bottom: 17px;">
+                    <div class="col l-4 m-4 c-12" style="margin-bottom: 17px">
                         <div class="footer__info">
                             <div class="footer__info-brand">
                                 <img src="view/images/logo1.png" alt="" class="footer__info-brand-logo">
