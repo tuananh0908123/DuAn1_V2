@@ -25,7 +25,7 @@
                             <center>
                                 <td style="font-size: 5px;"><?= $sanPham['price'] ?>$</td>
                             </center>
-                        
+                            
                         </tr>
                     </div>
                 <?php } ?>

@@ -130,10 +130,42 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             include "view/lienhe.php";
             break;
 
-        case 'giohang':
-            include "view/giohang.php";
-            break;
+            case "addtocart":
+                if (isset($_POST['addtocart'])&&($_POST['addtocart'])) {
+                    var_dump($_POST);
+                    $id = isset($product['id']) ? $product['id'] : '';
+                    $name = isset($product['name']) ? $product['name'] : '';
+                    $img = isset($product['img']) ? $product['img'] : '';
+                    $price = isset($product['price']) ? $product['price'] : 0;
 
+                    if (!isset($_SESSION['giohang'])) {
+                        $_SESSION['giohang'] = array();
+                    }
+                
+                    $existingItem = null;
+                    foreach ($_SESSION['giohang'] as $key => $item) {
+                        if ($item['name'] === $name) {
+                            $existingItem = $item;
+                            break;
+                        }
+                    }
+                
+                    if ($existingItem !== null) {
+                        $existingItem['sl'] += $sl;
+                    } else {
+                        $item = array(
+                            'id' => $id,
+                            'name' => $name,
+                            'img' => $img,
+                            'price' => $price,
+                            'sl' => $sl
+                        );
+                        $_SESSION['giohang'][] = $item;
+                    }
+                }
+                
+                include "view/giohang/giohang.php";
+                break;
         case 'thongke':
             $listthongke = loadall_thongke();
             include "thongke/list.php";
