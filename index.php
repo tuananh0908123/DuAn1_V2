@@ -6,7 +6,6 @@ include "view/header.php";
 define("BASE_URL", "http://localhost/duan11/");
 include "model/danhmuc.php";
 include "model/taikhoan.php";
-include "model/cart.php";
 
 $spNew = loadAll_sanpham_home();
 $dsdm = loadAll_danhmuc();
@@ -131,40 +130,42 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             include "view/lienhe.php";
             break;
 
-            case 'giohang':
-                if (isset($_SESSION['user'])) {
-                    $iduser = $_SESSION['user']['id'];
-            
-                    if (isset($_REQUEST['action'])) {
-                        $action = $_REQUEST['action'];
-                        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['them'])) {
-                            
-                            $user_id = $_POST['user_id'];
-                            $sanpham_id = $_POST['sanpham_id'];
-                            $bienthesanpham_id = $_POST['bienthesanpham_id'];
-                            $soluong = $_POST['soluong'];
-                            Insert_Cart($user_id, $sanpham_id, $bienthesanpham_id, $soluong);
-                        }
-            
-                        if ($action === 'delete' && isset($_REQUEST['sanpham_id'])) {
-                            $sanpham_id = $_REQUEST['sanpham_id'];
-                            delete_cart_item($iduser, $sanpham_id); 
-                            echo "Sản phẩm đã được xóa khỏi giỏ hàng.";
-                        } elseif ($action === 'checkout') {
-                            // Gọi hàm thanh toán hoặc xử lý đơn hàng ở đây
-                            // Ví dụ: thanh toán và chuyển hướng
-                            // checkout_cart($iduser);
-                            echo "Thanh toán thành công.";
+            case "addtocart":
+                if (isset($_POST['addtocart'])&&($_POST['addtocart'])) {
+                    var_dump($_POST);
+                    $id = isset($product['id']) ? $product['id'] : '';
+                    $name = isset($product['name']) ? $product['name'] : '';
+                    $img = isset($product['img']) ? $product['img'] : '';
+                    $price = isset($product['price']) ? $product['price'] : 0;
+
+                    if (!isset($_SESSION['giohang'])) {
+                        $_SESSION['giohang'] = array();
+                    }
+                
+                    $existingItem = null;
+                    foreach ($_SESSION['giohang'] as $key => $item) {
+                        if ($item['name'] === $name) {
+                            $existingItem = $item;
+                            break;
                         }
                     }
-                    $gioHang = loadAll_Cart($iduser);
-                } else {
-                    header("Location: login.php"); 
-                    exit;
+                
+                    if ($existingItem !== null) {
+                        $existingItem['sl'] += $sl;
+                    } else {
+                        $item = array(
+                            'id' => $id,
+                            'name' => $name,
+                            'img' => $img,
+                            'price' => $price,
+                            'sl' => $sl
+                        );
+                        $_SESSION['giohang'][] = $item;
+                    }
                 }
-                include "view/giohang/donhang.php";
+                
+                include "view/giohang/giohang.php";
                 break;
-
         case 'thongke':
             $listthongke = loadall_thongke();
             include "thongke/list.php";

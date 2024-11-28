@@ -57,14 +57,23 @@
                         <center>
                             <td style="font-size: 5px;"><?= $sanPham['price'] ?>$</td>
                         </center>
-                        <form method="POST" action="index.php?act=giohang">
-                            <input type="hidden" name="sanpham_id" value="ID_CUA_SAN_PHAM"> 
-                            <input type="hidden" name="user_id" value="Tên người nhận">
-                            <input type="hidden" name="bienthesanpham_id" value="Địa chỉ nhận hàng">
-                            
-                            <button type="submit" name="them">Thêm vào giỏ hàng</button>
+                        <?php 
+                        if (isset($_POST['name']) && isset($_POST['price'])) {
+                            $name = $_POST['name'];
+                            $price = $_POST['price'];
+                        } else {
+                            $name = ''; 
+                            $price = 0; 
+                        }
+?>
+                         <form method="POST" action="index.php?act=addtocart">
+                            <input type="hidden" value="<?= $sanPham['id'] ?>" name="id">
+                            <input type="hidden" value="<?= $sanPham['name'] ?>" name="name"> 
+                            <input type="hidden" value="<?= $sanPham['img'] ?>" name="img">
+                            <input type="hidden" value="<?= $sanPham['price'] ?>" name="gia"> 
+                            <input type="number" name="sl" value="1" min="1" class="quantity-input">
+                            <input type="submit" value="Thêm vào giỏ hàng" name="addtocart">
                         </form>
-                 
                         
                     </tr>
                 </div>

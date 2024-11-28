@@ -28,6 +28,8 @@ function pdo_execute($sql, ...$args) {
     }
 }
 
+
+
 // Hàm thực thi câu truy vấn (SELECT trả về nhiều dòng)
 function pdo_query($sql,  $params = []) {
     try {
