@@ -6,6 +6,7 @@ include "view/header.php";
 define("BASE_URL", "http://localhost/duan11/");
 include "model/danhmuc.php";
 include "model/taikhoan.php";
+include "model/cart.php";
 
 $spNew = loadAll_sanpham_home();
 $dsdm = loadAll_danhmuc();
@@ -130,9 +131,39 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             include "view/lienhe.php";
             break;
 
-        case 'giohang':
-            include "view/giohang.php";
-            break;
+            case 'giohang':
+                if (isset($_SESSION['user'])) {
+                    $iduser = $_SESSION['user']['id'];
+            
+                    if (isset($_REQUEST['action'])) {
+                        $action = $_REQUEST['action'];
+                        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['them'])) {
+                            
+                            $user_id = $_POST['user_id'];
+                            $sanpham_id = $_POST['sanpham_id'];
+                            $bienthesanpham_id = $_POST['bienthesanpham_id'];
+                            $soluong = $_POST['soluong'];
+                            Insert_Cart($user_id, $sanpham_id, $bienthesanpham_id, $soluong);
+                        }
+            
+                        if ($action === 'delete' && isset($_REQUEST['sanpham_id'])) {
+                            $sanpham_id = $_REQUEST['sanpham_id'];
+                            delete_cart_item($iduser, $sanpham_id); 
+                            echo "Sản phẩm đã được xóa khỏi giỏ hàng.";
+                        } elseif ($action === 'checkout') {
+                            // Gọi hàm thanh toán hoặc xử lý đơn hàng ở đây
+                            // Ví dụ: thanh toán và chuyển hướng
+                            // checkout_cart($iduser);
+                            echo "Thanh toán thành công.";
+                        }
+                    }
+                    $gioHang = loadAll_Cart($iduser);
+                } else {
+                    header("Location: login.php"); 
+                    exit;
+                }
+                include "view/giohang/donhang.php";
+                break;
 
         case 'thongke':
             $listthongke = loadall_thongke();

@@ -57,7 +57,14 @@
                         <center>
                             <td style="font-size: 5px;"><?= $sanPham['price'] ?>$</td>
                         </center>
-                        <div style="text-align: center;" ><button class="fa fa-shopping-cart" name="addtocart"></button></div>
+                        <form method="POST" action="index.php?act=giohang">
+                            <input type="hidden" name="sanpham_id" value="ID_CUA_SAN_PHAM"> 
+                            <input type="hidden" name="user_id" value="Tên người nhận">
+                            <input type="hidden" name="bienthesanpham_id" value="Địa chỉ nhận hàng">
+                            
+                            <button type="submit" name="them">Thêm vào giỏ hàng</button>
+                        </form>
+                 
                         
                     </tr>
                 </div>

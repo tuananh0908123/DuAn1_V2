@@ -17,6 +17,5 @@ function loadAll_binhluan($idpro) {
     $sql .= " ORDER BY id DESC"; 
     return pdo_query($sql, $params); 
 }
-
-    
+ 
 ?>
