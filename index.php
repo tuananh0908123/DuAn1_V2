@@ -177,7 +177,9 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
         case 'hoidap':
             include "view/hoidap.php";
             break;
-
+            case 'donhang':
+                include "view/donhang.php";
+                break;
         default:
             include "view/home.php";
             break;
