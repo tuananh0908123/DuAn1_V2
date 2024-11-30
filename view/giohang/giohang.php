@@ -39,10 +39,10 @@ if (isset($_POST['addtocart'])) {
             $_SESSION['giohang'][] = $item; // Thêm sản phẩm vào giỏ hàng
 
             // Thêm vào cơ sở dữ liệu
-            $stmt = $pdo->prepare("INSERT INTO giohang (user_id, sanpham_id, name, img, price, sl) VALUES (?, ?, ?, ?, ?, ?)");
+            $stmt = $pdo->prepare("INSERT INTO giohang (user_id, sanpham_id, name, img, price, soluong) VALUES (?, ?, ?, ?, ?, ?)");
             // Giả sử user_id là 1, thay đổi nếu cần
             $user_id = 1; 
-            $stmt->execute([$user_id, $id, $name, $img, $price, $quantity]);
+            $stmt->execute([$user_id, $id, $name, $img, $price, $soluong]);
         }
     }
 }
