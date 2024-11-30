@@ -6,7 +6,9 @@
     include "../model/taikhoan.php";
     include "../model/binhluan.php";
     include "../model/thongke.php";
-    define("BASE_URL", "http://localhost:8080/DUANMAU/");
+    include "../model/bill.php";
+    include "../model/cart.php";
+    define("BASE_URL", "http://localhost/DUANMAU/");
     // controller
 
     if(isset($_GET['act'])){
@@ -159,7 +161,15 @@
                 $listbieudo = loadall_thongke();
                 include "thongke/bieudo.php";
                 break;          
-                    
+                case 'listbill':
+                    if (isset($_POST['kyw']) && ($_POST['kyw']!="")) {
+                        $kyw= $_POST['kyw'];              
+                    } else {
+                        $kyw="";
+                    }
+                    $listbill= loadall_bill($kyw, 0);
+                    include "bill/listbill.php";
+                    break;
                 
 
             default:
