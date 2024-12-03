@@ -16,6 +16,12 @@ function checkuser($user , $pass) {
     return $sp;
 }
 
+function checkuseraccount($user) {
+    $sql = "SELECT * from taikhoan where user = '".$user."'";
+    $sp = pdo_query_one($sql);
+    return $sp;
+}
+
 function checkemail($email) {
     $sql = "SELECT * from taikhoan where email = '".$email."'";
     $sp = pdo_query_one($sql);

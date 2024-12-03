@@ -24,6 +24,15 @@
                             
                             <center>
                                 <td style="font-size: 5px;"><?= $sanPham['price'] ?>$</td>
+                                <form method="POST" action="index.php?act=addtocart">
+                                    <input type="hidden" value="<?= $sanPham['id'] ?>" name="id">
+                                    <input type="hidden" value="<?= $sanPham['name'] ?>" name="name">
+                                    <input type="hidden" value="<?= $sanPham['img'] ?>" name="img">
+                                    <input type="hidden" value="<?= $sanPham['price'] ?>" name="price">
+                                    <center style="margin-left:140px"><input type="number" name="sl" value="1" min="1" style="width: 80px;">
+                                    <input type="submit" value="🛒" name="addtocart">
+                            </center>
+                        </form>
                             </center>
                             
                         </tr>

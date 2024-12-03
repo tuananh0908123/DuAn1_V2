@@ -32,15 +32,18 @@
             var name = document.getElementById("name").value;
             var email = document.getElementById("email").value;
             var question = document.getElementById("question").value;
-
+            var phone = document.getElementById("question").value;
             if (name == "" || email == "" || question == "") {
                 alert("Tất cả các trường phải được điền đầy đủ.");
                 return false;
             }
-
             document.getElementById("successMessage").style.display = "block";
             return false;
         }
+
+        const validate = (email)=>{
+            return email.indexOf('@')>0&&email.indexOf('.')>-1
+            } 
     </script>
 </head>
 

@@ -1,5 +1,5 @@
 <div class="row">
-    <div id="myChart" style="width:100%; max-width: 600px; height:500px;"></div>
+    <div id="myChart" style="width:100%; max-width: 1200px; height:600px;"></div>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script>
         google.charts.load('current', {'packages':['corechart']});

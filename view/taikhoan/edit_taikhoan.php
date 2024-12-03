@@ -9,7 +9,7 @@
                     extract($_SESSION['user']);
                 }
                 ?>
-                <form action="index.php?act=edit_taikhoan   " method="post">
+                <form action="index.php?act=edit_taikhoan" method="post">
                     <div class="row mb10">
                         Email
                     <input type="email" name="email" value="<?= $email ?>">
