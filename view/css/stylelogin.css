@@ -1,0 +1,377 @@
+/*-- 
+Author: W3layouts 
+Author URL: http://w3layouts.com 
+License: Creative Commons Attribution 3.0 Unported 
+License URL: http://creativecommons.org/licenses/by/3.0/ 
+--*/
+
+/* reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, nav ul, nav li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0 ;
+    padding: 0 ;
+    border: 0 ;
+    font-size: 100% ;
+    font: inherit ;
+    vertical-align: baseline  ;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block !important;
+}
+ol, ul {
+    list-style: none !important;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+blockquote, q {
+    quotes: none !important;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '' !important;
+    content: none !important;
+}
+table {
+    border-collapse: collapse !important;
+    border-spacing: 0 !important;
+}
+
+/* start editing from here */
+a {
+    text-decoration: none !important;
+}
+.txt-rt {
+    text-align: right !important; /* text align right */
+}
+.txt-lt {
+    text-align: left !important; /* text align left */
+}
+.txt-center {
+    text-align: center !important; /* text align center */
+}
+.float-rt {
+    float: right !important; /* float right */
+}
+.float-lt {
+    float: left !important; /* float left */
+}
+.clear {
+    clear: both !important; /* clear float */
+}
+.pos-relative {
+    position: relative !important; /* Position Relative */
+}
+.pos-absolute {
+    position: absolute !important; /* Position Absolute */
+}
+.vertical-base {
+    vertical-align: baseline !important; /* vertical align baseline */
+}
+.vertical-top {
+    vertical-align: top !important; /* vertical align top */
+}
+nav.vertical ul li {
+    display: block !important; /* vertical menu */
+}
+nav.horizontal ul li {
+    display: inline-block !important; /* horizontal menu */
+}
+img {
+    max-width: 100% !important;
+}
+
+/* end reset */
+body {
+    background: url(../assets/img/1.jpg) no-repeat center top !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    background-position: center !important;
+    text-align: center !important;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+/*--header--*/
+.header-w3l {
+    padding-top: 2em !important;
+}
+.header-w3l h1 {
+    font-size: 3em !important;
+    color: white !important;
+    letter-spacing: 8px !important;
+    font-weight: 500 !important;
+    font-family: 'Dosis', sans-serif !important;
+    text-transform: uppercase !important;
+    text-shadow: 5px 3px 5px #101010 !important;
+}
+/*--//header--*/
+
+/*--main--*/
+.wthree-pro h2 {
+    font-size: 1.2em !important;
+    color: #fff !important;
+    letter-spacing: 4px !important;
+    margin-bottom: 1.5em !important;
+    text-transform: uppercase !important;
+}
+.sub-main-w3 input[type="text"], .sub-main-w3 input[type="password"] {
+    outline: none !important;
+    font-size: .9em !important;
+    padding: 1em 3em 1em 1em !important;
+    border: none !important;
+    margin-bottom: 0.3em !important;
+    background: rgba(255, 255, 255, 0.85) !important;
+    width: 82% !important;
+    color: #000 !important;
+    border-radius: 30px !important;
+    font-weight: 400 !important;
+    font-family: 'Open Sans', sans-serif !important;
+    letter-spacing: 1px !important;
+}
+.sub-main-w3 {
+    width: 26% !important;
+    margin: 10em auto 12em !important;
+}
+.sub-w3l h6 a {
+    font-size: .9em !important;
+    letter-spacing: 1px !important;
+    text-align: right !important;
+    display: inherit !important;
+}
+.sub-w3l {
+    margin-top: 1em !important;
+}
+.right-w3l {
+    margin-top: 2em !important;
+}
+.pom-agile {
+    position: relative !important;
+}
+input.pass {
+    margin-top: .7em !important;
+}
+span.icon1, span.icon2 {
+    color: #ea2858 !important;
+    font-size: 1.1em !important;
+    position: absolute !important;
+    right: 6% !important;
+}
+span.icon1 {
+    top: 23% !important;
+}
+span.icon2 {
+    top: 34% !important;
+}
+.sub-main-w3 input[type="submit"] {
+    color: white !important;
+    background: #ea2858 !important;
+    border: none !important;
+    padding: .7em 0 !important;
+    outline: none !important;
+    width: 44% !important;
+    font-size: 1em !important;
+    cursor: pointer !important;
+    letter-spacing: 1px !important;
+    font-weight: 400 !important;
+    font-family: 'Open Sans', sans-serif !important;
+    transition: 0.5s all !important;
+    border-radius: 30px !important;
+}
+.sub-main-w3 input[type="submit"]:hover {
+    background: #fff !important;
+    color: black !important;
+    transition: 0.5s all !important;
+}
+/*--//main--*/
+
+/*--responsive--*/
+@media(max-width: 1680px) {
+    /* Add responsive styles here with !important as needed */
+}
+@media(max-width: 1600px) {
+    /* Add responsive styles here with !important as needed */
+}
+@media(max-width: 1440px) {
+    .footer {
+        padding-bottom: 3em !important;
+    }
+    .sub-main-w3 {
+        width: 29% !important;
+        margin: 7em auto 9em !important;
+    }
+}
+@media(max-width: 1366px) {
+    /* Add responsive styles here with !important as needed */
+}
+@media(max-width: 1280px) {
+    /* Add responsive styles here with !important as needed */
+}
+@media(max-width: 1080px) {
+    .sub-main-w3 {
+        width: 35% !important;
+    }
+}
+@media(max-width: 1050px) {
+    /* Add responsive styles here with !important as needed */
+}
+@media(max-width: 1024px) {
+    .sub-main-w3 {
+        width: 38% !important;
+    }
+}
+@media(max-width: 991px) {
+    /* Add responsive styles here with !important as needed */
+}
+@media(max-width: 900px) {
+    .header-w3l {
+        padding-top: 1.5em !important;
+    }
+    .sub-main-w3 {
+        width: 42% !important;
+        margin: 6em auto 8em !important;
+    }
+    .footer {
+        padding-bottom: 2.5em !important;
+    }
+}
+@media(max-width: 800px) {
+    .header-w3l h1 {
+        font-size: 2.7em !important;
+        letter-spacing: 7px !important;
+    }
+}
+@media(max-width: 768px) {
+    .header-w3l {
+        padding-top: 4.5em !important;
+    }
+    .sub-main-w3 {
+        width: 50% !important;
+        margin: 10em auto 16em !important;
+    }
+}
+@media(max-width: 736px) {
+    .header-w3l {
+        padding-top: 1.5em !important;
+    }
+    .sub-main-w3 {
+        margin: 5em auto 6.5em !important;
+    }
+}
+@media(max-width: 667px) {
+    .footer {
+        padding-bottom: 2em !important;
+    }
+}
+@media(max-width: 640px) {
+    /* Add responsive styles here with !important as needed */
+}
+@media(max-width: 600px) {
+    .sub-main-w3 input[type="email"], .sub-main-w3 input[type="password"] {
+        padding: .9em 3em .9em 1em !important;
+    }
+    .sub-main-w3 input[type="submit"] {
+        font-size: .95em !important;
+    }
+    .footer p {
+        letter-spacing: 1px !important;
+    }
+    .right-w3l {
+        margin-top: 1em !important;
+    }
+    .header-w3l h1 {
+        font-size: 2.5em !important;
+        letter-spacing: 5px !important;
+    }
+    .wthree-pro h2 {
+        font-size: 1em !important;
+    }
+    .sub-main-w3 {
+        margin: 6em auto 8em !important;
+        width: 54% !important;
+    }
+}
+@media(max-width: 568px) {
+    .sub-main-w3 {
+        width: 56% !important;
+    }
+}
+@media(max-width: 480px) {
+    .header-w3l h1 {
+        font-size: 2.3em !important;
+        letter-spacing: 4px !important;
+    }
+    .sub-main-w3 {
+        width: 69% !important;
+        margin: 6em auto 6.3em !important;
+    }
+    .footer p {
+        line-height: 1.9 !important;
+    }
+}
+@media(max-width: 440px) {
+    .sub-main-w3 {
+        width: 72% !important;
+    }
+}
+@media(max-width: 414px) {
+    .sub-main-w3 input[type="email"], .sub-main-w3 input[type="password"] {
+        font-size: .85em !important;
+    }
+    .sub-w3l h6 a {
+        font-size: .8em !important;
+    }
+    .header-w3l h1 {
+        font-size: 2.1em !important;
+    }
+    .sub-main-w3 {
+        margin: 7em auto 9.3em !important;
+    }
+}
+@media(max-width: 384px) {
+    .sub-main-w3 input[type="email"], .sub-main-w3 input[type="password"] {
+        font-size: .8em !important;
+    }
+    .header-w3l h1 {
+        font-size: 2em !important;
+    }
+    .sub-main-w3 input[type="submit"] {
+        font-size: .9em !important;
+    }
+    .wthree-pro h2 {
+        margin-bottom: 1.2em !important;
+    }
+    .sub-main-w3 {
+        margin: 6em auto 7.5em !important;
+        width: 74% !important;
+    }
+    span.icon1 {
+        top: 18% !important;
+    }
+    span.icon2 {
+        top: 32% !important;
+    }
+}
+@media(max-width: 375px) {
+    /* Add responsive styles here with !important as needed */
+}
+@media(max-width: 320px) {
+    .header-w3l h1 {
+        font-size: 1.8em !important;
+        letter-spacing: 2px !important;
+    }
+    .wthree-pro h2 {
+        font-size: .9em !important;
+        letter-spacing: 2px !important;
+    }
+    .sub-main-w3 input[type="submit"] {
+        font-size: .8em !important;
+    }
+    .footer p {
+        font-size: .8em !important;
+    }
+    .sub-main-w3 {
+        margin: 4.2em auto 4.5em !important;
+        width: 81% !important;
+    }
+    .sub-main-w3 input[type="email"], .sub-main-w3 input[type="password"] {
+        width: 80% !important;
+    }
+}
+/*--//responsive--*/

@@ -3,7 +3,7 @@ session_start();
 include "model/pdo.php";
 include "model/sanpham.php";
 include "view/header.php";
-define("BASE_URL", "http://localhost/duan11/");
+define("BASE_URL", "http://localhost:8080/duan11/");
 include "model/danhmuc.php";
 include "model/taikhoan.php";
 include "model/cart.php";
@@ -77,7 +77,7 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
                     $thongBaoLoi = "Tài khoản không tồn tại . Vui lòng kiểm tra hoặc đăng kí";
                 }
             }
-            include "view/taikhoan/dangki.php";
+            include "view/dangnhap.php";
             break;
         case 'edit_taikhoan':
             $thongBaoThanhCong = "";

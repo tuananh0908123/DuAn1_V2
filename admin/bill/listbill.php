@@ -1,137 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Danh Sách Đơn Hàng</title>
     <style>
-      /* Đặt nền cho toàn bộ trang */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    margin: 0;
-    padding: 20px;
-}
+        body {
+            background-color: #f8f9fa;
+        }
 
-/* Tiêu đề danh sách đơn hàng */
-.formtitle h1 {
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
-}
+        .formtitle {
+            margin-bottom: 20px;
+        }
 
-/* Form tìm kiếm */
-.search-form {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px; 
-}
+        .table {
+            border: none;
+        }
 
-.search-form input[type="text"] {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-right: 10px;
-    width: 200px;
-}
+        .table th,
+        .table td {
+            vertical-align: middle;
+            border: none; /* Remove borders from table cells */
+        }
 
-.search-form input[type="submit"] {
-    padding: 8px 12px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.search-form input[type="submit"]:hover {
-    background-color: #0056b3;
-}
-
-/* Bảng danh sách đơn hàng */
-.table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.table th, .table td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: left;
-}
-
-.table th {
-    background-color: #007bff;
-    color: white;
-}
-
-.table tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-.table tr:hover {
-    background-color: #e9ecef;
-}
-
-/* Form cập nhật trạng thái */
-.formdsloai form {
-    display: inline-block;
-}
-
-.formdsloai select {
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
+        .table thead th {
+            background-color: white; /* Set header background to white */
+            color: black; /* Set header text color to black */
+        }
     </style>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
-<div class="row formtitle mb10">
-        <h1>DANH SÁCH ĐƠN HÀNG</h1>
-    </div>
-    <div class="row formcontent">   
-    <div class="row mb10 formdsloai">
-        <table class="table table-striped">
-            <tr>
-                <th>MÃ ĐƠN HÀNG</th>
-                <th>KHÁCH HÀNG</th>
-                <th>SỐ LƯỢNG HÀNG</th>
-                <th>GIÁ TRỊ ĐƠN HÀNG</th>
-                <th>TÌNH TRẠNG ĐƠN HÀNG</th>
-                <th>NGÀY ĐẶT HÀNG</th>
-                <th>CẬP NHẬT TRẠNG THÁI</th>
-            </tr>
-             
-            <?php
-            foreach ($listbill as $bill) {
-                extract($bill);
-                $kh = $bill["bill_name"] . '<br>' . $bill["bill_email"] . '<br>' . $bill["bill_address"] . '<br>' . $bill["bill_tel"];
-                $ttdh = get_ttdh($bill["bill_status"]);
-                $count = loadall_cart_count($bill["id"]);
-            
-                echo '<tr>
-                       
-                        <td>DAM-' . $bill['id'] . '</td>
-                        <td>' . $kh . '</td>
-                        <td>' . $count . '</td>
-                        <td><strong>' . $bill['total'] . '</strong>$</td>
-                        <td>' . $ttdh . '</td>
-                        <td>' . $bill['ngaydathang'] . '</td>
-                        <td>
-                            <form action="index.php?act=updateBillStatus" method="post">
-                                <input type="hidden" name="bill_id" value="' . $bill['id'] . '">
-                                <select name="new_status" class="form-select form-select-sm">
-                                    <option value="0"' . ($bill["bill_status"] == 0 ? "selected" : "") . '>Đang xử lý</option>
-                                    <option value="1"' . ($bill["bill_status"] == 1 ? "selected" : "") . '>Chờ xác nhận</option>
-                                    <option value="2"' . ($bill["bill_status"] == 2 ? "selected" : "") . '>Đang giao</option>
-                                    <option value="3"' . ($bill["bill_status"] == 3 ? "selected" : "") . '>Đã giao</option>
-                                </select>
-                                <input type="submit" value="Cập nhật" class="btn btn-primary btn-sm">
-                            </form>
-                        </td>
-                    </tr>';
-            }            
-            ?>
-        </table>
-        <div class="row text-center mt-4">
-        <a href="index.php?act=doanhthu" class="btn btn-success">Xem Tính Doanh Thu Đơn Hàng</a>
-    </div>
+<body>
+    <div class="container mt-4">
+        <div class="row formtitle">
+            <h1 class="text-center">Danh Sách Đơn Hàng</h1>
+        </div>
+        <div class="row formcontent">
+            <div>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Mã đơn hàng</th>
+                            <th>Khách hàng</th>
+                            <th>Số lượng hàng</th>
+                            <th>Giá trị đơn hàng</th>
+                            <th>Tình trạng đơn hàng</th>
+                            <th>Ngày đặt hàng</th>
+                            <th>Cập nhật đơn hàng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        foreach ($listbill as $bill) {
+                            extract($bill);
+                            $kh = $bill["bill_name"] . '<br>' . $bill["bill_email"] . '<br>' . $bill["bill_address"] . '<br>' . $bill["bill_tel"];
+                            $ttdh = get_ttdh($bill["bill_status"]);
+                            $count = loadall_cart_count($bill["id"]);
+                        ?>
+                            <tr>
+                                <td>DAM-<?= $bill['id'] ?></td>
+                                <td><?= $kh ?></td>
+                                <td><?= $count ?></td>
+                                <td><strong><?= $bill['total'] ?></strong>$</td>
+                                <td><?= $ttdh ?></td>
+                                <td><?= $bill['ngaydathang'] ?></td>
+                                <td>
+                                    <form action="index.php?act=updateBillStatus" method="post">
+                                        <input type="hidden" name="bill_id" value="<?= $bill['id'] ?>">
+                                        <select name="new_status" class="form-select form-select-sm">
+                                            <option value="0" <?= ($bill["bill_status"] == 0 ? "selected" : "") ?>>Đang xử lý</option>
+                                            <option value="1" <?= ($bill["bill_status"] == 1 ? "selected" : "") ?>>Chờ xác nhận</option>
+                                            <option value="2" <?= ($bill["bill_status"] == 2 ? "selected" : "") ?>>Đang giao</option>
+                                            <option value="3" <?= ($bill["bill_status"] == 3 ? "selected" : "") ?>>Đã giao</option>
+                                        </select>
+                                        <input type="submit" value="Cập nhật" class="btn btn-primary btn-sm mt-2">
+                                    </form>
+                                </td>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                </table>
+                <div class="row text-center mt-4">
+                    <a href="index.php?act=doanhthu" class="btn btn-success">Xem Tính Doanh Thu Đơn Hàng</a>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <script>
+        // Select all checkboxes
+        document.getElementById('selectAll').onclick = function() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = this.checked;
+            });
+        };
+    </script>
+</body>
+
+</html>

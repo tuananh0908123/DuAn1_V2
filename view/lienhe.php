@@ -6,51 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liên Hệ - Techshop</title>
     <script>
-        const form = document.getElementById('contact-form');
-        const nameInput = document.getElementById('name');
-        const emailInput = document.getElementById('email');
-        const messageInput = document.getElementById('message');
-        const nameError = document.getElementById('name-error');
-        const emailError = document.getElementById('email-error');
-        const messageError = document.getElementById('message-error');
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById('contact-form');
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const messageInput = document.getElementById('message');
+            const nameError = document.getElementById('name-error');
+            const emailError = document.getElementById('email-error');
+            const messageError = document.getElementById('message-error');
+            const successMessage = document.getElementById('successMessage');
 
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
 
-        form.addEventListener('submit', function(e) {
+                nameError.textContent = '';
+                emailError.textContent = '';
+                messageError.textContent = '';
+                successMessage.style.display = 'none';
 
-            e.preventDefault();
+                let isValid = true;
 
+                if (nameInput.value.trim() === '') {
+                    nameError.textContent = 'Họ và Tên là bắt buộc.';
+                    isValid = false;
+                } else if (nameInput.value.length < 3) {
+                    nameError.textContent = 'Họ và Tên phải có ít nhất 3 ký tự.';
+                    isValid = false;
+                }
 
-            nameError.textContent = '';
-            emailError.textContent = '';
-            messageError.textContent = '';
+                const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                if (emailInput.value.trim() === '') {
+                    emailError.textContent = 'Email là bắt buộc.';
+                    isValid = false;
+                } else if (!emailPattern.test(emailInput.value.trim())) {
+                    emailError.textContent = 'Vui lòng nhập email hợp lệ.';
+                    isValid = false;
+                }
 
+                if (messageInput.value.trim() === '') {
+                    messageError.textContent = 'Tin nhắn là bắt buộc.';
+                    isValid = false;
+                } else if (messageInput.value.length < 10) {
+                    messageError.textContent = 'Tin nhắn phải có ít nhất 10 ký tự.';
+                    isValid = false;
+                }
 
-            let isValid = true;
-
-
-            if (nameInput.value.trim() === '') {
-                nameError.textContent = 'Họ và Tên là bắt buộc.';
-                isValid = false;
-            }
-
-            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-            if (emailInput.value.trim() === '') {
-                emailError.textContent = 'Email là bắt buộc.';
-                isValid = false;
-            } else if (!emailPattern.test(emailInput.value.trim())) {
-                emailError.textContent = 'Vui lòng nhập email hợp lệ.';
-                isValid = false;
-            }
-
-            if (messageInput.value.trim() === '') {
-                messageError.textContent = 'Tin nhắn là bắt buộc.';
-                isValid = false;
-            }
-
-            if (isValid) {
-                alert('Tin nhắn đã được gửi thành công!');
-                form.reset();
-            }
+                if (isValid) {
+                    successMessage.style.display = 'block';
+                    form.reset();
+                }
+            });
         });
     </script>
     <style>
@@ -167,6 +172,16 @@
         footer p {
             margin: 0;
         }
+
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+
+        .success-message {
+            color: green;
+            font-size: 1em;
+        }
     </style>
 </head>
 
@@ -190,7 +205,7 @@
             </div>
             <div>
                 <h3>Gửi Tin Nhắn</h3>
-                <form class="contact-form" id="contact-form" method="POST" action="#">
+                <form class="contact-form" id="contact-form" method="POST" action="index.php?act=lienhe">
                     <div>
                         <label for="name">Họ và Tên:</label>
                         <input type="text" id="name" name="name" required placeholder="Nhập họ và tên của bạn">
@@ -207,7 +222,10 @@
                         <div class="error" id="message-error"></div>
                     </div>
                     <div>
-                        <button type="submit">Gửi Tin Nhắn</button>
+                        <button type="submit" class="btn btn-success w-100">Gửi Tin Nhắn</button>
+                    </div>
+                    <div id="successMessage" class="success-message" style="display:none;">
+                        Cảm ơn bạn, tin nhắn của bạn đã được gửi thành công.
                     </div>
                 </form>
             </div>
@@ -218,6 +236,10 @@
         </div>
 
     </main>
+
+    <footer>
+        <p>&copy; 2024 Techshop. All Rights Reserved.</p>
+    </footer>
 
 </body>
 
