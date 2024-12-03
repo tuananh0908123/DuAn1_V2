@@ -10,14 +10,16 @@
                         <img class="spct" src="<?= htmlspecialchars(BASE_URL . $onesp['img']) ?>" alt="Hình ảnh sản phẩm">
                     </div>
                     <form method="POST" action="index.php?act=addtocart">
-                            <input type="hidden" value="<?= $onesp['id'] ?>" name="id">
-                            <input type="hidden" value="<?= $onesp['name'] ?>" name="name"> 
-                            <input type="hidden" value="<?= $onesp['img'] ?>" name="img">
-                            <input type="hidden" value="<?= $onesp['price'] ?>" name="price"> 
-                            <center style="margin-left:140px"><input type="number" name="sl" value="1" min="1" style="width: 50px;">
-                            <input type="submit" value="🛒" name="addtocart"></center>
-                        </form>
+                        <input type="hidden" value="<?= $onesp['id'] ?>" name="id">
+                        <input type="hidden" value="<?= $onesp['name'] ?>" name="name"> 
+                        <input type="hidden" value="<?= $onesp['img'] ?>" name="img">
+                        <input type="hidden" value="<?= $onesp['price'] ?>" name="price"> 
 
+                        <div class="text-center" style="margin-left: 400px;">
+                            <input type="number" name="sl" value="1" min="1" class="form-control w-25 d-inline" style="display: inline-block;">
+                            <input type="submit" value="🛒" name="addtocart" class="btn btn-primary">
+                        </div>
+                    </form>
                 </div>
             <?php else: ?>
                 <p>Không tìm thấy thông tin sản phẩm.</p>

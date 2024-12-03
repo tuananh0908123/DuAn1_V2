@@ -8,6 +8,7 @@
     include "../model/thongke.php";
     include "../model/bill.php";
     include "../model/cart.php";
+    include "../model/doanhthu.php";
     define("BASE_URL", "http://localhost/DUANMAU/");
     // controller
 
@@ -148,6 +149,10 @@
                 $listTaiKhoan = loadAll_taikhoan();
                 include "taikhoan/list.php";
                 break;
+            case "doanhthu" :
+                include "doanhthu/doanhthu.php";
+                break;
+    
 
             case "dsbl" :
                 $listBinhLuan = loadAll_binhluan(0);

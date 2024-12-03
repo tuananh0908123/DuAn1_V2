@@ -19,7 +19,7 @@ body {
 .search-form {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
 }
 
 .search-form input[type="text"] {
@@ -79,6 +79,8 @@ body {
     border-radius: 4px;
 }
     </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <div class="row formtitle mb10">
@@ -128,5 +130,8 @@ body {
             }            
             ?>
         </table>
+        <div class="row text-center mt-4">
+        <a href="index.php?act=doanhthu" class="btn btn-success">Xem Tính Doanh Thu Đơn Hàng</a>
+    </div>
     </div>
 
