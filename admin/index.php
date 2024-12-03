@@ -9,7 +9,7 @@
     include "../model/bill.php";
     include "../model/cart.php";
     include "../model/doanhthu.php";
-    define("BASE_URL", "http://localhost/DUANMAU/");
+    define("BASE_URL", "http://localhost:8080/duan11/");
     // controller
 
     if(isset($_GET['act'])){
@@ -203,6 +203,5 @@
         include "home.php";
     }
 
-    include "footer.php";
     
 ?>
