@@ -168,7 +168,7 @@ if (isset($_GET['act']) && $_GET['act'] != "") {
             break;
 
             // Tạo bill
-        case 'billconfrm':
+        case 'billconfirm':
             if (isset($_POST['dongydathang']) && $_POST['dongydathang']) {
                 // Kiểm tra nếu người dùng đã đăng nhập
                 if (isset($_SESSION['user'])) {
