@@ -88,7 +88,7 @@ body {
     </div>
     <div class="row formcontent">   
     <div class="row mb10 formdsloai">
-        <table>
+        <table class="table table-striped">
             <tr>
                 <th>MÃ ĐƠN HÀNG</th>
                 <th>KHÁCH HÀNG</th>
@@ -117,13 +117,13 @@ body {
                         <td>
                             <form action="index.php?act=updateBillStatus" method="post">
                                 <input type="hidden" name="bill_id" value="' . $bill['id'] . '">
-                                <select name="new_status">
+                                <select name="new_status" class="form-select form-select-sm">
                                     <option value="0"' . ($bill["bill_status"] == 0 ? "selected" : "") . '>Đang xử lý</option>
                                     <option value="1"' . ($bill["bill_status"] == 1 ? "selected" : "") . '>Chờ xác nhận</option>
                                     <option value="2"' . ($bill["bill_status"] == 2 ? "selected" : "") . '>Đang giao</option>
                                     <option value="3"' . ($bill["bill_status"] == 3 ? "selected" : "") . '>Đã giao</option>
                                 </select>
-                                <input type="submit" value="Cập nhật">
+                                <input type="submit" value="Cập nhật" class="btn btn-primary btn-sm">
                             </form>
                         </td>
                     </tr>';

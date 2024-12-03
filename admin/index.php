@@ -166,22 +166,32 @@
                 $listbieudo = loadall_thongke();
                 include "thongke/bieudo.php";
                 break;          
-                case 'listbill':
-                    if (isset($_POST['kyw']) && ($_POST['kyw']!="")) {
-                        $kyw= $_POST['kyw'];              
-                    } else {
-                        $kyw="";
-                    }
+            case 'listbill':
+                if (isset($_POST['kyw']) && ($_POST['kyw']!="")) {
+                    $kyw= $_POST['kyw'];              
+                } else {
+                    $kyw="";
+                }
                     $listbill= loadall_bill($kyw, 0);
                     include "bill/listbill.php";
                     break;
-                    case 'xoabl':
-                        if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-                            $id = $_GET['id'];
-                            delete_binhluan($id);
-                        } 
-                        $listbinhluan = loadAll_binhluan(0);
-                        include "binhluan/list.php";
+            case 'xoabl':
+                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                    $id = $_GET['id'];
+                    delete_binhluan($id);
+                } 
+                    header("Location: index.php?act=dsbl");
+                    include "binhluan/list.php";
+                    break;
+                    case 'updateBillStatus':
+                        if (isset($_POST['bill_id']) && isset($_POST['new_status'])) {
+                            $bill_id = $_POST['bill_id'];
+                            $new_status = $_POST['new_status'];
+                            update_bill_status($bill_id, $new_status);
+                            $thongbao = "Cập nhật trạng thái đơn hàng thành công!";
+                        }
+                        $listbill = loadall_bill("", 0);
+                        include "bill/listbill.php";
                         break;
 
             default:

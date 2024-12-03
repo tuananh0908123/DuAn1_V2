@@ -14,6 +14,9 @@
                             <th></th>
                         </tr>
                         <?php 
+                         if (!isset($listBinhLuan) || !is_array($listBinhLuan)) {
+                            $listBinhLuan = []; 
+                        }
                          foreach($listBinhLuan as $binhLuan) {
                             extract($binhLuan);
 
