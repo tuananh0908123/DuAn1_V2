@@ -1,4 +1,4 @@
-<div class="row mb">
+<div class="">
     <div class="boxtrai mr" style="margin-top:0">
         <div class="row mb">
             <div class="boxtitle">GIỎ HÀNG</div>

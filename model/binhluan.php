@@ -17,5 +17,8 @@ function loadAll_binhluan($idpro) {
     $sql .= " ORDER BY id DESC"; 
     return pdo_query($sql, $params); 
 }
- 
+function delete_binhluan($id) {
+    $sql = "DELETE FROM binhluan WHERE id = $id";
+    pdo_execute($sql);
+}
 ?>

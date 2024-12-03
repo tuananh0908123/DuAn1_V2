@@ -175,7 +175,14 @@
                     $listbill= loadall_bill($kyw, 0);
                     include "bill/listbill.php";
                     break;
-                
+                    case 'xoabl':
+                        if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                            $id = $_GET['id'];
+                            delete_binhluan($id);
+                        } 
+                        $listbinhluan = loadAll_binhluan(0);
+                        include "binhluan/list.php";
+                        break;
 
             default:
                 include "home.php";
